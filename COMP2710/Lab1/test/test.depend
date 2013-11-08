@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1382803494 source:c:\users\chris s\documents\comp2710\lab 2\distributed tigerbook\test.cpp
+	<fstream>
+	<iostream>
+

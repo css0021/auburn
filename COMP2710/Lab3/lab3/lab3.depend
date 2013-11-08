@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1383549296 source:c:\users\chris\documents\comp2710\lab3\amf\amf.cpp
+	<iostream>
+	<string>
+	"node.h"
+	"system.h"
+
+1383596109 c:\users\chris\documents\comp2710\lab3\amf\node.h
+	<string>
+
+1383676777 c:\users\chris\documents\comp2710\lab3\amf\system.h
+	<vector>
+	"node.h"
+	<string>
+
+1383597153 source:c:\users\chris\documents\comp2710\lab3\amf\system.cpp
+	"system.h"
+	<fstream>
+	<sstream>
+	<iostream>
+	<string>
+	<cstdlib>
+	<stack>
+

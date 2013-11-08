@@ -1,0 +1,120 @@
+QUESTION 1:
+string firstname = "William";
+string lastname = "Tell";
+
+string fullname = firstname + " " + lastname;
+
+QUESTION 2:
+string username = "Paul";
+string message = "Please join our Aubie message group!";
+string message_buffer;
+
+string message_buffer = "{[" + username + "]}" + message;
+
+QUESTION 3:
+string username2 = "Martha";
+string message2 = "Wazzup!";
+
+string message_buffer = "{[" + username2 + "]}" + message2 + "{[" + username + "]}" + message;
+
+QUESTION 4:
+string message3 = "Go Tiger";
+string message4 = "Glory to Auburn!";
+
+string message_buffer = message3 + "\n" + message4;
+
+QUESTION 5:
+The function string.size() returns the length of the string.
+message.size() would return 36 
+
+QUESTION 6:
+The result would be an empty string of length 0.
+
+QUESTION 7:
+#include <iostream>
+#include <string>
+
+int firstOccurence(std::string x,std::string y) {
+        return x.find(y);
+}
+
+int main() {
+	std::string message_buffer = "{[Martha]}Wazzup!{[Paul]}Please join our Aubie message group!";
+	
+	
+	std::cout << firstOccurence(message_buffer,"{[") << std::endl;;
+	return 0;
+}
+
+QUESTION 8:
+#include <iostream>
+#include <string>
+
+int secondOccurence(std::string x, std::string y) {
+	return x.find(y, 1);
+}
+
+
+int main() {
+	std::string message_buffer = "{[Martha]}Wazzup!{[Paul]}Please join our Aubie message group!";
+	
+	
+	std::cout << secondOccurence(message_buffer,"{[") << std::endl;
+	return 0;
+}
+
+QUESTION 9:
+#include <iostream>
+#include <string>
+
+int main() {
+	
+	std::string message_buffer = "{[Martha]}Wazzup!{[Paul]}Please join our Aubie message group!";
+	
+	std::cout << message_buffer.substr(2,6) << std::endl;
+
+	return 0;
+
+
+}
+
+
+QUESTION 10:
+
+#include <iostream>
+#include <string>
+
+
+int main() {
+	
+	std::string message_buffer = "{[Martha]}Wazzup!{[Paul]}Please join our Aubie message group!";
+	
+	std::cout << message_buffer.substr(19,4) << std::endl;
+
+	return 0;
+}
+
+QUESTION 11:
+
+#include <iostream>
+#include <string>
+
+
+	
+int main() {
+	
+	std::string message_buffer = "{[Martha]}Wazzup!{[Paul]}Please join our Aubie message group!";
+	
+	std::cout << message_buffer.substr(25,36) << std::endl;
+
+	return 0;
+}
+
+QUESION 12:
+cin >> messagebuffer will only grab a continuous stream of characters. Not the
+entire line. It will not grab spaces.
+
+getline(cin,messagebuffer) will grab the entire input line, rather than just
+"Aubie".
+
+

@@ -1,0 +1,83 @@
+Script started on Mon 28 Oct 2013 01:18:21 AM CDT
+[?1034hbash-4.1$ ./dtb.out
+	=============================================================
+	|        The Distributed TigerBook Messaging System!        |
+	=============================================================
+Enter user: Bill
+	=========================================================
+	|        Welcome to Distributed TigerBook, Bill!        |
+	=========================================================
+Add friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+
+Enter option: f
+Enter name: Jane
+	=============================================
+	|        Added Jane to Friend's list        |
+	=============================================
+Add friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+
+Enter option: p
+Enter message: I'm back to thwe    e daily grind.
+Whats ew  new here?
+!!
+	=================================
+	|        Message posted!        |
+	=================================
+Add friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+
+Enter option: h
+	==================================
+	|        Bill's Home Page        |
+	==================================
+Bill: 
+I'm back to the daily grind.
+Whats new here?
+
+Jane: 
+We had a great time at the beach!
+Not to mention scuba diving and sailing.
+
+
+
+		Display more messages?: (yes/no): yes
+
+Jane: 
+Great stuff.
+You need to try this.
+
+Jane: 
+Summer is cool
+Still trying to adjust to the semester drill.
+
+Tom: 
+Let me be your friend.
+It's fun
+
+Bill: 
+Taking a slow cruise to the Bahamas, ya'll!
+Will be back to civilization in 7 days.
+Keep you posted soon.
+
+Bill: 
+Amazing TigerBook!
+Let's get this out quick.
+
+Bill: 
+Hello there, everyone!
+Welcome to our new chat group.
+Feel free to post messages any time.
+
+	=========================================
+	|        End of Bill's Wall Page        |
+	=========================================
+
+Add friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+
+Enter option: q
+	============================================================
+	|        Thank you for using Distributed TigerBook!        |
+	============================================================
+bash-4.1$ exit
+exit
+
+Script done on Mon 28 Oct 2013 01:21:05 AM CDT

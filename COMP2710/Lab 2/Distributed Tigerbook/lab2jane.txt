@@ -1,0 +1,95 @@
+Script started on Mon 28 Oct 2013 01:14:20 AM CDT
+[?1034hbash-4.1$ ./dtb.out
+	=============================================================
+	|        The Distributed TigerBook Messaging System!        |
+	=============================================================
+Enter user: Jae ne
+	=========================================================
+	|        Welcome to Distributed TigerBook, Jane!        |
+	=========================================================
+Add friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+
+Enter option: f
+Enter name: Tom
+	============================================
+	|        Added Tom to Friend's list        |
+	============================================
+Add friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+
+Enter option: p
+Enter message: Summer is cool
+Still trying to adjust to the semester drill.
+!!
+	=================================
+	|        Message posted!        |
+	=================================
+Add friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+
+Enter option: t
+Enter tweet: Great stuff.
+You need to try this.
+!!
+	===============================
+	|        Tweet posted!        |
+	===============================
+Add friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+
+Enter option: p
+Enter message: We had a great time at the beach!
+Not to mention scuba diving and sailing.
+!!
+	=================================
+	|        Message posted!        |
+	=================================
+Add friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+
+Enter option: h
+	==================================
+	|        Jane's Home Page        |
+	==================================
+Jane: 
+We had a great time at the beach!
+Not to mention scuba diving and sailing.
+
+Jane: 
+Great stuff.
+You need to try this.
+
+
+
+		Display more messages?: (yes/no): yes
+
+Jane: 
+Summer is cool
+Still trying to adjust to the semester drill.
+
+Tom: 
+Hiking the Rockies in 5 days!
+Can't wait to head for the mountains.
+
+Tom: 
+Let me be your friend.
+It's fun
+
+Tom: 
+Welcome to my new msg page!
+I'm new to this, so be gentle, no flame please.
+
+Bill: 
+Amazing TigerBook!
+Let's get this out quick.
+
+	=========================================
+	|        End of Jane's Wall Page        |
+	=========================================
+
+Add friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+
+Enter option: q
+	============================================================
+	|        Thank you for using Distributed TigerBook!        |
+	============================================================
+bash-4.1$ exit
+exit
+
+Script done on Mon 28 Oct 2013 01:17:21 AM CDT

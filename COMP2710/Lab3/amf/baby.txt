@@ -1,0 +1,10 @@
+7
+S
+E
+S B A * *
+B F E S *
+F * * B *
+A * D C S
+C A * * *
+D * * * A
+E * * * B

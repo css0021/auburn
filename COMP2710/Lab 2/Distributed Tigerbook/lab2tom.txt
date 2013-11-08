@@ -1,0 +1,76 @@
+Script started on Mon 28 Oct 2013 01:11:46 AM CDT
+[?1034hbash-4.1$ ./dtb.out
+	=============================================================
+	|        The Distributed TigerBook Messaging System!        |
+	=============================================================
+Enter user: Tom
+	========================================================
+	|        Welcome to Distributed TigerBook, Tom!        |
+	========================================================
+Add friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+
+Enter option: f
+Enter name: Bill
+	=============================================
+	|        Added Bill to Friend's list        |
+	=============================================
+Add friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+
+Enter option: p
+Enter message: Welcome to my new msg page!
+I'm new to this, so be gentle, no flame please.
+!!
+	=================================
+	|        Message posted!        |
+	=================================
+Add friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+
+Enter option: t
+Enter tweet: Let me br y   e your friend.
+It's fun
+!!
+	===============================
+	|        Tweet posted!        |
+	===============================
+Add friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+
+Enter option: p
+Enter message: Hiking the Rockies in 5 days!
+Can't wait to head for the mountains.
+!!
+	=================================
+	|        Message posted!        |
+	=================================
+Add friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+
+Enter option: w
+	=================================
+	|        Tom's Wall Page        |
+	=================================
+Hiking the Rockies in 5 days!
+Can't wait to head for the mountains.
+
+Let me be your friend.
+It's fun
+
+
+
+		Display more messages?: (yes/no): yes
+
+Welcome to my new msg page!
+I'm new to this, so be gentle, no flame please.
+
+	========================================
+	|        End of Tom's Wall Page        |
+	========================================
+
+Add friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+
+Enter option: q
+	============================================================
+	|        Thank you for using Distributed TigerBook!        |
+	============================================================
+bash-4.1$ exit
+exit
+
+Script done on Mon 28 Oct 2013 01:13:24 AM CDT

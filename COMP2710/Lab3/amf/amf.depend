@@ -1,0 +1,90 @@
+# depslib dependency file v1.0
+1383892781 source:c:\users\chris\documents\comp2710\lab3\amf\amf.cpp
+	<iostream>
+	<string>
+	"node.h"
+	"system.h"
+
+1383702928 c:\users\chris\documents\comp2710\lab3\amf\node.h
+	<string>
+
+1383892133 c:\users\chris\documents\comp2710\lab3\amf\system.h
+	<vector>
+	"node.h"
+	<string>
+	<stack>
+
+1383893410 source:c:\users\chris\documents\comp2710\lab3\amf\system.cpp
+	"system.h"
+	<fstream>
+	<sstream>
+	<iostream>
+	<string>
+	<cstdlib>
+	<vector>
+	<ctime>
+	<algorithm>
+
+1383701164 source:c:\users\chris\documents\comp2710\lab3\amf\node.cpp
+
+1383916216 source:c:\users\chris s\documents\comp2710\lab3\amf\amf.cpp
+	<iostream>
+	<string>
+	"node.h"
+	"system.h"
+	<ctime>
+	<cstdlib>
+
+1383900884 c:\users\chris s\documents\comp2710\lab3\amf\node.h
+	<string>
+
+1383909835 c:\users\chris s\documents\comp2710\lab3\amf\system.h
+	<vector>
+	"node.h"
+	<string>
+	<stack>
+
+1383701164 source:c:\users\chris s\documents\comp2710\lab3\amf\node.cpp
+
+1383916186 source:c:\users\chris s\documents\comp2710\lab3\amf\system.cpp
+	"system.h"
+	<fstream>
+	<sstream>
+	<iostream>
+	<string>
+	<cstdlib>
+	<vector>
+	<ctime>
+	<algorithm>
+	<functional>
+	<cctype>
+	<locale>
+
+1383891976 source:c:\users\chris\dropbox\comp2710\lab3\amf\amf.cpp
+	<iostream>
+	<string>
+	"node.h"
+	"system.h"
+
+1383702928 c:\users\chris\dropbox\comp2710\lab3\amf\node.h
+	<string>
+
+1383892133 c:\users\chris\dropbox\comp2710\lab3\amf\system.h
+	<vector>
+	"node.h"
+	<string>
+	<stack>
+
+1383701164 source:c:\users\chris\dropbox\comp2710\lab3\amf\node.cpp
+
+1383892143 source:c:\users\chris\dropbox\comp2710\lab3\amf\system.cpp
+	"system.h"
+	<fstream>
+	<sstream>
+	<iostream>
+	<string>
+	<cstdlib>
+	<vector>
+	<ctime>
+	<algorithm>
+

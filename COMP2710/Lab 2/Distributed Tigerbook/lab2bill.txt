@@ -1,0 +1,48 @@
+Script started on Mon 28 Oct 2013 01:09:08 AM CDT
+[?1034hbash-4.1$ ./dtb.out
+	=============================================================
+	|        The Distributed TigerBook Messaging System!        |
+	=============================================================
+Enter user: Bill
+	=========================================================
+	|        Welcome to Distributed TigerBook, Bill!        |
+	=========================================================
+Add friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+
+Enter option: p
+Enter message: Hello there, everyone!
+Welcome to our new chat rg  group.
+Feel free to post messages any time.
+!!
+	=================================
+	|        Message posted!        |
+	=================================
+Add friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+
+Enter option: t
+Enter tweet: Amazing TigerBook!
+Let's get this out quick.
+!!
+	===============================
+	|        Tweet posted!        |
+	===============================
+Add friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+
+Enter option: p
+Enter message: Taking a slow cruise to the Bahamas, ya'll!
+Will be back to civilization in 7 days.
+Keep you posted soon.
+!!
+	=================================
+	|        Message posted!        |
+	=================================
+Add friend (f), Post (p), Tweet (t), Wall (w), Home (h), Quit (q)
+
+Enter option: q
+	============================================================
+	|        Thank you for using Distributed TigerBook!        |
+	============================================================
+bash-4.1$ exit
+exit
+
+Script done on Mon 28 Oct 2013 01:10:52 AM CDT

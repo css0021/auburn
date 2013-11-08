@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1381558348 source:c:\users\chris s\documents\comp2710\lab1\tb.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+

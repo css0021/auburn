@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1381526360 source:h:\comp2710\lab 2\distributed tigerbook\dtb.cpp
+	<iostream>
+	<fstream>
+	<string>
+
+1383026350 source:c:\users\chris s\documents\comp2710\lab 2\distributed tigerbook\dtb.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<cstdlib>
+	<iomanip>
+	<algorithm>
+	<vector>
+
