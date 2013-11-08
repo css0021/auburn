@@ -1,3 +1,3 @@
 comp2710
 ========
-files for software construction comp2719
+files for software construction comp2710
