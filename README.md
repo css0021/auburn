@@ -1,3 +1,3 @@
-comp2710
+auburn computing
 ========
-files for software construction comp2710
+files for research and classes
