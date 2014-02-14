@@ -29,7 +29,6 @@
 #define FLAG6 32
 #define FLAG7 64
 #define FLAG8 128
-
 #define BITPOS0 0
 #define BITPOS1 1
 #define BITPOS2 2
@@ -38,6 +37,7 @@
 #define BITPOS5 5
 #define BITPOS6 6
 #define BITPOS7 7
+
 
 
 
@@ -60,10 +60,10 @@
 *                               Function prototypes                           *
 \*****************************************************************************/
 
+int check_bit(int flag, int bit);
+int clear_flag(int device, int flags);
 int main (int argc, char **argv);
 void Control(void);
-bool check_bit(int flag);
-void clear_flag(int& device);
 
 
 
@@ -92,13 +92,7 @@ int main (int argc, char **argv) {
    } 
 } /* end of main function */
 
-inline bool check_bit(int flag, int bit) {
-	return flag  & (1 << bit);
-}
 
-inline void clear_flag(int device, int& flags) {
-	flags &= ~(1 << device);
-}
 
 
 /***********************************************************************\
@@ -118,32 +112,20 @@ void Control(void){
       Flags = 0;
 		if (check_bit(temp, BITPOS0) == FLAG1) { //device 0
 			clear_flag(BITPOS0, Flags);
-			DisplayEvent(*BufferLastEvent[0].msg, &BufferLastEvent[0]);
-			Server(&BufferLastEvent[0]);
+			DisplayEvent(*BufferLastEvent[BITPOS0].msg, &BufferLastEvent[BITPOS0]);
+			Server(&BufferLastEvent[BITPOS0]);
 			
       	}
       	if (check_bit(temp, BITPOS1) == FLAG2) { //device 1
 
       		clear_flag(BITPOS1, Flags);
-			DisplayEvent(*BufferLastEvent[0].msg, &BufferLastEvent[0]);
-			Server(&BufferLastEvent[0]);
+			DisplayEvent(*BufferLastEvent[BITPOS1].msg, &BufferLastEvent[BITPOS1]);
+			Server(&BufferLastEvent[BITPOS1]);
 
       	}
 
-	DisplayEvent(*BufferLastEvent[1].msg, &BufferLastEvent[1]);
-	Server(&BufferLastEvent[1]);
-	//printf("%d\n", temp);
-	Flags &= ~(1 << 0);
 
       }
-      else printf("aiojdad");
-      //else if (temp & (1 << 2) == 1) {
-
-	//DisplayEvent(*BufferLastEvent[2].msg, &BufferLastEvent[2]);
-      
-
-	//Server(&BufferLastEvent[2]);
-      //}
       printf("\n >>>>>>>>>  >>> When: %10.3f  Flags = %d\n", Now(),
 	     Flags);
 	/*
@@ -200,6 +182,14 @@ void Control(void){
  
   }
 
+int check_bit(int flag, int bit) {
+	return flag  & (1 << bit);
+}
+
+int clear_flag(int device, int flags) {
+	return flags &= ~(1 << device);
+
+}
 
 /***********************************************************************\
 * Input : None                                                          *
