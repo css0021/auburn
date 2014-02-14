@@ -93,7 +93,7 @@ int main (int argc, char **argv) {
 } /* end of main function */
 
 inline bool check_bit(int flag, int bit) {
-	return flag  & (1 << bit)
+	return flag  & (1 << bit);
 }
 
 inline void clear_flag(int device, int& flags) {
