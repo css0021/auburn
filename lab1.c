@@ -30,6 +30,16 @@
 #define FLAG7 64
 #define FLAG8 128
 
+#define BITPOS0 0
+#define BITPOS1 1
+#define BITPOS2 2
+#define BITPOS3 3
+#define BITPOS4 4
+#define BITPOS5 5
+#define BITPOS6 6
+#define BITPOS7 7
+
+
 
 
 /*****************************************************************************\
@@ -106,12 +116,19 @@ void Control(void){
       LastStatus = Flags;
       int temp = Flags;
       Flags = 0;
-      if (temp & (1 << 0) == 1) { //device 0
-	DisplayEvent(*BufferLastEvent[0].msg, &BufferLastEvent[0]);
-	Server(&BufferLastEvent[0]);
-	temp &= ~(1 << 0);
-      }
-      else if (temp & (1 << 1) == 1) { //device 1
+		if (check_bit(temp, BITPOS0) == FLAG1) { //device 0
+			clear_flag(BITPOS0, Flags);
+			DisplayEvent(*BufferLastEvent[0].msg, &BufferLastEvent[0]);
+			Server(&BufferLastEvent[0]);
+			
+      	}
+      	if (check_bit(temp, BITPOS1) == FLAG2) { //device 1
+
+      		clear_flag(BITPOS1, Flags);
+			DisplayEvent(*BufferLastEvent[0].msg, &BufferLastEvent[0]);
+			Server(&BufferLastEvent[0]);
+
+      	}
 
 	DisplayEvent(*BufferLastEvent[1].msg, &BufferLastEvent[1]);
 	Server(&BufferLastEvent[1]);
