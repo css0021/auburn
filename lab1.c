@@ -106,7 +106,7 @@ void Control(void){
   while (1) {
     printf("%10.3f   Flags = %d - \n ", Now(), Flags);
     sleep(1); // Just to slow down to have time to see Flags
-    if (Flags != LastStatus){ //an event has occured
+    if (Flags != 0){ //an event has occured
       LastStatus = Flags;
       int temp = Flags;
       Flags = 0;
@@ -118,7 +118,7 @@ void Control(void){
       	}
       	if (check_bit(temp, BITPOS1) == FLAG2) { //device 1
 
-      		clear_flag(BITPOS1, Flags);
+      			clear_flag(BITPOS1, Flags);
 			DisplayEvent(*BufferLastEvent[BITPOS1].msg, &BufferLastEvent[BITPOS1]);
 			Server(&BufferLastEvent[BITPOS1]);
 
@@ -126,6 +126,13 @@ void Control(void){
 
 
       }
+      //else if (temp & (1 << 2) == 1) {
+
+	//DisplayEvent(*BufferLastEvent[2].msg, &BufferLastEvent[2]);
+      
+
+	//Server(&BufferLastEvent[2]);
+      //}
       printf("\n >>>>>>>>>  >>> When: %10.3f  Flags = %d\n", Now(),
 	     Flags);
 	/*
