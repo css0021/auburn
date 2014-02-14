@@ -1,4 +1,3 @@
-
 /*****************************************************************************\
 * Laboratory Exercises COMP 3510                                              *
 * Author: Saad Biaz                                                           *
@@ -22,8 +21,14 @@
 *                             Global definitions                              *
 \*****************************************************************************/
 
-#define FLAG1 0
-#define FLAG2 1
+#define FLAG1 1
+#define FLAG2 2
+#define FLAG3 4
+#define FLAG4 8
+#define FLAG5 16
+#define FLAG6 32
+#define FLAG7 64
+#define FLAG8 128
 
 
 
@@ -47,6 +52,8 @@
 
 int main (int argc, char **argv);
 void Control(void);
+bool check_bit(int flag);
+void clear_flag(int& device);
 
 
 
@@ -75,6 +82,15 @@ int main (int argc, char **argv) {
    } 
 } /* end of main function */
 
+inline bool check_bit(int flag, int bit) {
+	return flag  & (1 << bit)
+}
+
+inline void clear_flag(int device, int& flags) {
+	flags &= ~(1 << device);
+}
+
+
 /***********************************************************************\
  * Input : none                                                          *
  * Output: None                                                          *
@@ -90,7 +106,6 @@ void Control(void){
       LastStatus = Flags;
       int temp = Flags;
       Flags = 0;
-      //printf("%d", Flags);
       if (temp & (1 << 0) == 1) { //device 0
 	DisplayEvent(*BufferLastEvent[0].msg, &BufferLastEvent[0]);
 	Server(&BufferLastEvent[0]);
