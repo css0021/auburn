@@ -21,25 +21,8 @@
 *                             Global definitions                              *
 \*****************************************************************************/
 
-#define FLAG1 1
-#define FLAG2 2
-#define FLAG3 4
-#define FLAG4 8
-#define FLAG5 16
-#define FLAG6 32
-#define FLAG7 64
-#define FLAG8 128
-#define BITPOS0 0
-#define BITPOS1 1
-#define BITPOS2 2
-#define BITPOS3 3
-#define BITPOS4 4
-#define BITPOS5 5
-#define BITPOS6 6
-#define BITPOS7 7
-
-
-
+#define SET 1
+#define CLEAR 0
 
 
 /*****************************************************************************\
@@ -60,8 +43,7 @@
 *                               Function prototypes                           *
 \*****************************************************************************/
 
-int check_bit(int flag, int bit);
-int clear_flag(int device, int flags);
+int checkLSB(int flag);
 int main (int argc, char **argv);
 void Control(void);
 
@@ -101,100 +83,35 @@ int main (int argc, char **argv) {
  * Function: Monitor Devices and process events                          *
  \***********************************************************************/
 void Control(void){
-  int i;
-  Status LastStatus=0;
+  int i = 0;
+  int processed = 0;
   while (1) {
     printf("%10.3f   Flags = %d - \n ", Now(), Flags);
-    sleep(1); // Just to slow down to have time to see Flags
     if (Flags != 0){ //an event has occured
-      LastStatus = Flags;
-      int temp = Flags;
+      int tpFlags = Flags;
       Flags = 0;
-		if (check_bit(temp, BITPOS0) == FLAG1) { //device 0
-			clear_flag(BITPOS0, Flags);
-			DisplayEvent(*BufferLastEvent[BITPOS0].msg, &BufferLastEvent[BITPOS0]);
-			Server(&BufferLastEvent[BITPOS0]);
-			
-      	}
-      	if (check_bit(temp, BITPOS1) == FLAG2) { //device 1
-
-      			clear_flag(BITPOS1, Flags);
-			DisplayEvent(*BufferLastEvent[BITPOS1].msg, &BufferLastEvent[BITPOS1]);
-			Server(&BufferLastEvent[BITPOS1]);
-
-      	}
-
-
+      while (tpFlags != 0) {	
+	if (checkLSB(tpFlags) == SET) {
+		DisplayEvent(*BufferLastEvent[i].msg, &BufferLastEvent[i]);
+		Server(&BufferLastEvent[i]);
+	}	
+	tpFlags = tpFlags >> 1;
+	i++;
       }
-      //else if (temp & (1 << 2) == 1) {
-
-	//DisplayEvent(*BufferLastEvent[2].msg, &BufferLastEvent[2]);
-      
-
-	//Server(&BufferLastEvent[2]);
-      //}
-      printf("\n >>>>>>>>>  >>> When: %10.3f  Flags = %d\n", Now(),
-	     Flags);
-	/*
-      switch(Flags) {
+      i = 0;
 	
-	 case 0:
-	      DisplayEvent(*BufferLastEvent[0].msg, &BufferLastEvent[0]);
-	      Server(&BufferLastEvent[0]);
-              Flags = 0;
-	      break;
-
-	  case 1:
-              i = log2(Flags);
-	      DisplayEvent(*BufferLastEvent[i].msg, &BufferLastEvent[i]);
-	      Server(&BufferLastEvent[i]);
-              Flags = 0;
-	      break;
-          case 2:
-	      i = log2(Flags);
-	      DisplayEvent(*BufferLastEvent[i].msg, &BufferLastEvent[i]);
-	      Server(&BufferLastEvent[i]);
-              Flags = 0;
-	      break;
-
-          case 4:
- 	      i = log2(Flags);
-	      DisplayEvent(*BufferLastEvent[i].msg, &BufferLastEvent[i]);
-	      Server(&BufferLastEvent[i]);
-              Flags = 0;
-	     
-	      break;
-
-	  case 8:
- 	      i = log2(Flags);
-	      DisplayEvent(*BufferLastEvent[i].msg, &BufferLastEvent[i]);
-	      Server(&BufferLastEvent[i]);
-              Flags = 0;
-	      break;
-
-	  case 16:
-              i = log2(Flags);
-	      DisplayEvent(*BufferLastEvent[i].msg, &BufferLastEvent[i]);
-	      Server(&BufferLastEvent[i]);
-              Flags = 0;
-	      
-	      break;
-
-	 
-
-      }
-     */
-    }
-	
- 
-  }
-
-int check_bit(int flag, int bit) {
-	return flag  & (1 << bit);
-}
-
-int clear_flag(int device, int flags) {
-	return flags &= ~(1 << device);
+    
+     }
+   }
+ }
+  
+/**********************************************************************\
+ * Input : Flag - number you want to check the LSB of                  *
+ * Output : Returns 0 or 1					       *
+ * Function : Returns the bitwise AND of the input with 1.             *
+\**********************************************************************/
+int checkLSB(int flag) {
+	return flag & 1;
 
 }
 
